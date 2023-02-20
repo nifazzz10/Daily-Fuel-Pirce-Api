@@ -1,0 +1,5 @@
+beautifulsoup4 
+nbformat
+requests
+flask
+gunicorn
