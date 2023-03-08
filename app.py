@@ -4,6 +4,7 @@ from nbformat import write
 import requests
 import json
 
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -28,7 +29,7 @@ def get_content():
         states.append({"State":state_name,"Price":state_price})
 
     # return states
-    return render_template("prices.html", states = states)
+    return jsonify(states)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
